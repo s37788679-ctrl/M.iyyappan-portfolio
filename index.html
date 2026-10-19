@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d18">
+  <meta name="description" content="Iyyappan's personal portfolio, skills and projects.">
+  <title>Iyyappan | Personal Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #080d18;
+      --card: #101a2b;
+      --blue: #38bdf8;
+      --bright: #168bfa;
+      --white: #ffffff;
+      --muted: #bdc8d9;
+      --border: #243650;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(8, 13, 24, 0.96);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: var(--blue);
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 13px;
+      color: #d9e6f7;
+    }
+
+    nav a:hover {
+      color: var(--blue);
+    }
+
+    section {
+      padding: 65px 8%;
+      scroll-margin-top: 65px;
+    }
+
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      background:
+        radial-gradient(ellipse at 85% 25%,
+        #12335a 0%, transparent 48%);
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-weight: bold;
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 9vw, 62px);
+      line-height: 1.2;
+      margin: 16px 0;
+    }
+
+    h1 span, h2 span {
+      color: var(--blue);
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      color: #60caff;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: var(--muted);
+      margin: 10px 0;
+    }
+
+    .intro {
+      max-width: 560px;
+      font-size: 16px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 8px;
+      padding: 11px 17px;
+      font-weight: bold;
+      font-size: 14px;
+      background: var(--bright);
+      color: white;
+      border: 1px solid var(--bright);
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: #0871d5;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--blue);
+      border-color: var(--blue);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      padding: 22px;
+      margin-bottom: 16px;
+      transition: border-color 0.2s;
+    }
+
+    .card:hover {
+      border-color: var(--blue);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: #122b47;
+      border: 1px solid #28639a;
+      color: #9bdcff;
+      padding: 7px 13px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .project-label {
+      display: inline-block;
+      color: var(--blue);
+      font-size: 12px;
+      margin-top: 8px;
+    }
+
+    .contact-email {
+      color: var(--blue);
+      overflow-wrap: anywhere;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      border-top: 1px solid var(--border);
+      padding: 24px 6%;
+      font-size: 13px;
+    }
+
+    footer p {
+      margin: 4px 0;
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 12px 4%;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: flex-start;
+        gap: 14px;
+      }
+
+      section {
+        padding: 48px 6%;
+      }
+
+      .hero {
+        min-height: 70vh;
+      }
+
+      h2 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <div class="logo">Iyyappan.dev</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+      <p class="eyebrow">HELLO, WELCOME TO MY PORTFOLIO</p>
+
+      <h1>Hi, I'm <span>Iyyappan</span></h1>
+
+      <h2>AIML Student &amp; <span>Future Developer</span></h2>
+
+      <p class="intro">
+        I'm a student passionate about technology,
+        web development and artificial intelligence.
+        I'm learning new skills and building practical
+        projects to solve real-world problems.
+      </p>
+
+      <div class="buttons">
+        <a href="#projects" class="btn">Explore My Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About <span>Me</span></h2>
+
+      <div class="card">
+        <h3>Who am I?</h3>
+
+        <p>
+          Hello! My name is Iyyappan. I'm an
+          Artificial Intelligence and Machine Learning
+          student interested in technology and software.
+        </p>
+
+        <p>
+          I'm currently learning web development
+          and improving my programming skills through
+          hands-on projects.
+        </p>
+
+        <p>
+          My goal is to create useful applications,
+          gain practical experience and become a
+          skilled developer.
+        </p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>My <span>Skills</span></h2>
+
+      <div class="card">
+        <p>Technologies I'm learning and practising:</p>
+
+        <div class="skills">
+          <span class="skill">HTML</span>
+          <span class="skill">CSS</span>
+          <span class="skill">JavaScript - Learning</span>
+          <span class="skill">AI &amp; ML - Learning</span>
+          <span class="skill">Problem Solving</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>My <span>Projects</span></h2>
+
+      <div class="card">
+        <h3>Marketing Management System</h3>
+
+        <p>
+          A web project designed to organise marketing
+          information and activities. This project is
+          under development.
+        </p>
+
+        <span class="project-label">
+          HTML · CSS · JavaScript
+        </span>
+      </div>
+
+      <div class="card">
+        <h3>Personal Portfolio Website</h3>
+
+        <p>
+          My personal website to showcase my background,
+          learning journey, skills and projects.
+        </p>
+
+        <span class="project-label">HTML · CSS</span>
+      </div>
+
+      <div class="card">
+        <h3>Future Projects</h3>
+
+        <p>
+          I'm planning to build more practical software
+          projects as I improve my skills.
+        </p>
+
+        <span class="project-label">Learning in progress</span>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact <span>Me</span></h2>
+
+      <div class="card">
+        <h3>Let's connect!</h3>
+
+        <p>
+          If you'd like to discuss a project or
+          collaborate, feel free to contact me by email.
+        </p>
+
+        <p>
+          <a class="contact-email"
+             href="mailto:s37788679@gmail.com">
+            s37788679@gmail.com
+          </a>
+        </p>
+
+        <div class="buttons">
+          <a class="btn"
+             href="mailto:s37788679@gmail.com">
+            Send Me an Email
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Made with ❤️ by Iyyappan</p>
+    <p>My Learning Journey · 2026</p>
+  </footer>
+
+</body>
+</html>
